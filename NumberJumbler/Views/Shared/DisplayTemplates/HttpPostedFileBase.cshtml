@@ -1,0 +1,10 @@
+﻿@using System.Web
+@model HttpPostedFileBase
+<script>
+    function sync() {
+        var n1 = document.getElementById('n1');
+        var n2 = document.getElementById('n2');
+        n2.value = n1.value.replace(/^.*\\/, "");
+    }
+</script>  
+<input id="n1" name="uploadInput" type="file" style="display:none" onchange="sync()"/>
